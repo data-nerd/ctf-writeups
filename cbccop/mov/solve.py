@@ -34,15 +34,12 @@ def solve_with_math():
     plaintext = ''
 
     for b in flag_bytes:
-        hi = b & 0xF0
-        hi -= 0x50
-        ct = hi | (0xF & b)
-        plaintext += chr(ct)
+        plaintext += chr(b - 0x50)
 
     print(f"flag = {plaintext}")
 
 def solve_with_pythonic_math():
-    print(f'flag = {"".join([chr(((b & 0xF0) - 0x50) | (0xF & b)) for b in flag_bytes])}')
+    print(f'flag = {"".join([chr(b - 0x50) for b in flag_bytes])}')
 
 def find_key_with_crib():
     crib = 'CBCCOP{'
