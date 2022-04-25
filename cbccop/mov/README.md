@@ -107,6 +107,14 @@ CBBCOP{M0V_1S_7uRin6_Complete!}
 
 Oops, that 3rd character is wrong. I honestly don't remember "fixing" it before submitting so I think the actual answer had a different prefix from the other flags. I'm assuming it was some sort of reverse engineering mind games that the challenge authors were playing. If so, well done. You would have thrown me off if I wasn't so stubborn.
 
+Sharp-eyed readers will notice that the bit twiddling isn't necessary. This also works:
+
+```
+"".join([chr(b - 0x50) for b in flag_bytes])
+```
+
+I left the steps I took in this writeup and the `solve.py` file to show the thought process: from mapping table, to nibble manipulation, to simple subtraction. The end result is clear in hindsight but that's often the case. Learning in in the journey.
+
 ## Conclusion
 
 I probably made this way easier than it was supposed to be. I also know I made the basic analysis with a crib way harder than it needed to be.
