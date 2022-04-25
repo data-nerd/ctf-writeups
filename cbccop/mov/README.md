@@ -113,7 +113,7 @@ Sharp-eyed readers will notice that the bit twiddling isn't necessary. This also
 "".join([chr(b - 0x50) for b in flag_bytes])
 ```
 
-I left the steps I took in this writeup and the `solve.py` file to show the thought process: from mapping table, to nibble manipulation, to simple subtraction. The end result is clear in hindsight but that's often the case. Learning in in the journey.
+I left the steps I took in this writeup and the `solve.py` script to show the thought process: from mapping table, to nibble manipulation, to simple subtraction. The end result is clear in hindsight but that's often the case. Learning is in the journey.
 
 ## Conclusion
 
